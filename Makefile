@@ -11,7 +11,7 @@ all: extract_countries
 # Extract continent osm.pbf
 extract_continents: ./build/continents/extract.json ./build/sources/planet-260622.osm.pbf
 	echo "Extracting continents..."
-	osmium extract --config "./build/continents/extract.json" "./build/sources/planet-260622.osm.pbf" --fsync
+	osmium extract --config "./build/continents/extract.json" "./build/sources/planet-260622.osm.pbf" --fsync --overwrite
 
 # Extract country GEOJSONs
 ./build/country/extract.json: ./build/shapefile/ne_10m_admin_0_countries.shp
@@ -20,7 +20,7 @@ extract_continents: ./build/continents/extract.json ./build/sources/planet-26062
 # Extract countries osm.pbf
 extract_countries: ./build/country/extract.json extract_continents ./build/continents/Africa.osm.pbf
 	echo "Extracting countries..."
-	osmium extract --config "./build/countries/Africa-extract.json" "./build/continents/Africa.osm.pbf" --fsync
+	osmium extract --config "./build/countries/Africa-extract-2.json" "./build/continents/Africa.osm.pbf" --fsync --overwrite
 
 clean:
 	rm -rf build
