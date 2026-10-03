@@ -13,5 +13,9 @@ extract_continents: ./build/continents/extract.json ./build/sources/planet-26062
 	echo "Extracting continents..."
 	osmium extract --config "./build/continents/extract.json" "./build/sources/planet-260622.osm.pbf" --fsync
 
+# Extract country GEOJSONs
+./build/country/extract.json: ./build/shapefile/ne_10m_admin_0_countries.shp
+	python tools/extract_country_boundaries.py -i ./build/shapefile/ne_10m_admin_0_countries.shp -o ./build/countries
+
 clean:
 	rm -rf build
