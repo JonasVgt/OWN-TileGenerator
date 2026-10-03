@@ -33,11 +33,11 @@ def determine_name_column(gdf):
     return name_column
 
 
-def generate_country_geojsons(gdf, output_dir):
+def generate_country_geojsons(gdf, output_dir, extracts_per_file):
     name_column = determine_name_column(gdf)
 
     for continent, group in gdf.groupby("CONTINENT"):
-
+        num_files = 0
         extracts_countries = []
         for _, row in group.iterrows():
             country_name = row[name_column]
@@ -58,14 +58,26 @@ def generate_country_geojsons(gdf, output_dir):
                 }
             )
 
-        config = {"directory": str(output_dir), "extracts": extracts_countries}
+            if len(extracts_countries) >= extracts_per_file:
+                config = {"directory": str(output_dir), "extracts": extracts_countries}
+                with open(
+                    output_dir / f"{safe_filename(continent)}-extract-{num_files+1}.json",
+                    "w",
+                    encoding="utf-8",
+                ) as f:
+                    json.dump(config, f, indent=2)
+                num_files += 1
+                extracts_countries = []
 
-        with open(
-            output_dir / f"{safe_filename(continent)}-extract.json",
-            "w",
-            encoding="utf-8",
-        ) as f:
-            json.dump(config, f, indent=2)
+        if(len(extracts_countries) > 0):
+            config = {"directory": str(output_dir), "extracts": extracts_countries}
+
+            with open(
+                output_dir / f"{safe_filename(continent)}-extract-{num_files+1}.json",
+                "w",
+                encoding="utf-8",
+            ) as f:
+                json.dump(config, f, indent=2)
 
 
 def main():
@@ -87,6 +99,13 @@ def main():
         help="Output folder for GeoJSON files (default: countries).",
     )
 
+    parser.add_argument(
+        "-n",
+        "--extracts-per-file",
+        default="6",
+        help="Number of files per osmium extract to reduce memory usage (default: 6).",
+    )
+
     args = parser.parse_args()
 
     input_path = Path(args.input)
@@ -97,7 +116,7 @@ def main():
     gdf = gpd.read_file(input_path)
 
     print("Generating country geojsons...")
-    generate_country_geojsons(gdf, output_dir)
+    generate_country_geojsons(gdf, output_dir, args.extracts_per_file)
 
 
 if __name__ == "__main__":
