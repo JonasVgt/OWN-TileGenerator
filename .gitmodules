@@ -1,0 +1,3 @@
+[submodule "planetiler-nautical"]
+	path = planetiler-nautical
+	url = git@github.com:JonasVgt/planetiler-nautical.git
