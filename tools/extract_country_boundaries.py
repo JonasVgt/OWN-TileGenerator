@@ -41,7 +41,7 @@ def generate_country_geojsons(gdf, output_dir):
         extracts_countries = []
         for _, row in group.iterrows():
             country_name = row[name_column]
-            filename = output_dir / f"{safe_filename(country_name)}.geojson"
+            filename = f"{safe_filename(country_name)}.geojson"
 
             single = gpd.GeoDataFrame(
                 [{"geometry": row.geometry}],
@@ -49,7 +49,7 @@ def generate_country_geojsons(gdf, output_dir):
                 crs=gdf.crs,
             )
 
-            single.to_file(filename, driver="GeoJSON")
+            single.to_file(output_dir / filename, driver="GeoJSON")
 
             extracts_countries.append(
                 {
