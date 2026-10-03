@@ -1,4 +1,4 @@
-all: ./build/continents/extract.json
+all: extract_continents
 
 # Extract shapefile from zip
 ./build/shapefile/ne_10m_admin_0_countries.shp: 
@@ -7,3 +7,8 @@ all: ./build/continents/extract.json
 # Extract continent GEOJSONs
 ./build/continents/extract.json: ./build/shapefile/ne_10m_admin_0_countries.shp
 	python tools/extract_continent_boundaries.py -i ./build/shapefile/ne_10m_admin_0_countries.shp -o ./build/continents
+
+# Extract continent osm.pbf
+extract_continents: ./build/continents/extract.json ./build/sources/planet-260622.osm.pbf
+	echo "Extracting continents..."
+	osmium extract --config "./build/continents/extract.json" "./build/sources/planet-260622.osm.pbf" --fsync
