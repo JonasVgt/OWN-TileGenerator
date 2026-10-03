@@ -31,7 +31,7 @@ $(PLANETILER_JAR):
 	./mvnw clean package
 
 # Build tiles
-build-tiles: $(PLANETILER_JAR)
+./build/result/%.pmtiles: ./build/countries/%.osm.pbf $(PLANETILER_JAR) 
 	echo "Building tiles..."
 	java \
 	-Xmx20g \
@@ -39,12 +39,15 @@ build-tiles: $(PLANETILER_JAR)
 	-jar "$(PLANETILER_JAR)" \
 	--fetch-wikidata \
 	--download \
-	--osm-path="./build/countries/Ethiopia.osm.pbf" \
-	--output="./build/result/test.pmtiles" \
+	--osm-path="$<" \
+	--output="$@" \
 	--nodemap-type=sparsearray --storage=ram \
 	--download_dir="./build/sources" \
 	--tmpdir="./build/tmp" \
 	--force
+
+build-tiles: build/result/Western_Sahara.pmtiles
+
 
 clean:
 	rm -rf build
