@@ -12,3 +12,6 @@ all: extract_continents
 extract_continents: ./build/continents/extract.json ./build/sources/planet-260622.osm.pbf
 	echo "Extracting continents..."
 	osmium extract --config "./build/continents/extract.json" "./build/sources/planet-260622.osm.pbf" --fsync
+
+clean:
+	rm -rf build
