@@ -3,29 +3,29 @@
 # ---------------
 
 TARGETS := ./build/result/Ethiopia.pmtiles \
-	./build/result/South Sudan.pmtiles \
+	./build/result/South_Sudan.pmtiles \
 	./build/result/Somalia.pmtiles \
 	./build/result/Kenya.pmtiles \
 	./build/result/Malawi.pmtiles \
 	./build/result/Tanzania.pmtiles \
 	./build/result/Somaliland.pmtiles \
 	./build/result/Morocco.pmtiles \
-	./build/result/Western Sahara.pmtiles \
-	./build/result/Republic of the Congo.pmtiles \
-	./build/result/Democratic Republic of the Congo.pmtiles \
+	./build/result/Western_Sahara.pmtiles \
+	./build/result/Republic_of_the_Congo.pmtiles \
+	./build/result/Democratic_Republic_of_the_Congo.pmtiles \
 	./build/result/Namibia.pmtiles \
-	./build/result/South Africa.pmtiles \
+	./build/result/South_Africa.pmtiles \
 	./build/result/Libya.pmtiles \
 	./build/result/Tunisia.pmtiles \
 	./build/result/Zambia.pmtiles \
-	./build/result/Sierra Leone.pmtiles \
+	./build/result/Sierra_Leone.pmtiles \
 	./build/result/Guinea.pmtiles \
 	./build/result/Liberia.pmtiles \
-	./build/result/Central African Republic.pmtiles \
+	./build/result/Central_African_Republic.pmtiles \
 	./build/result/Sudan.pmtiles \
 	./build/result/Djibouti.pmtiles \
 	./build/result/Eritrea.pmtiles \
-	./build/result/Ivory Coast.pmtiles \
+	./build/result/Ivory_Coast.pmtiles \
 	./build/result/Mali.pmtiles \
 	./build/result/Senegal.pmtiles \
 	./build/result/Nigeria.pmtiles \
@@ -44,32 +44,32 @@ TARGETS := ./build/result/Ethiopia.pmtiles \
 	./build/result/Cameroon.pmtiles \
 	./build/result/Gabon.pmtiles \
 	./build/result/Niger.pmtiles \
-	./build/result/Burkina Faso.pmtiles \
+	./build/result/Burkina_Faso.pmtiles \
 	./build/result/Togo.pmtiles \
 	./build/result/Ghana.pmtiles \
 	./build/result/Guinea-Bissau.pmtiles \
 	./build/result/Egypt.pmtiles \
 	./build/result/Mauritania.pmtiles \
-	./build/result/Equatorial Guinea.pmtiles \
-	./build/result/The Gambia.pmtiles \
-	./build/result/Bir Tawil.pmtiles \
+	./build/result/Equatorial_Guinea.pmtiles \
+	./build/result/The_Gambia.pmtiles \
+	./build/result/Bir_Tawil.pmtiles \
 	./build/result/Madagascar.pmtiles \
 	./build/result/Comoros.pmtiles \
-	./build/result/São Tomé and Príncipe.pmtiles \
-	./build/result/Cape Verde.pmtiles \
+	./build/result/São_Tomé_and_Príncipe.pmtiles \
+	./build/result/Cape_Verde.pmtiles \
 	./build/result/Antarctica.pmtiles \
 	./build/result/Indonesia.pmtiles \
 	./build/result/Malaysia.pmtiles \
-	./build/result/Dhekelia Cantonment.pmtiles \
+	./build/result/Dhekelia_Cantonment.pmtiles \
 	./build/result/Cyprus.pmtiles \
 	./build/result/India.pmtiles \
-	./build/result/People's Republic of China.pmtiles \
+	./build/result/Peoples_Republic_of_China.pmtiles \
 	./build/result/Israel.pmtiles \
 	./build/result/Palestine.pmtiles \
 	./build/result/Lebanon.pmtiles \
 	./build/result/Syria.pmtiles \
-	./build/result/South Korea.pmtiles \
-	./build/result/North Korea.pmtiles \
+	./build/result/South_Korea.pmtiles \
+	./build/result/North_Korea.pmtiles \
 	./build/result/Bhutan.pmtiles \
 	./build/result/Oman.pmtiles \
 	./build/result/Uzbekistan.pmtiles \
@@ -78,7 +78,7 @@ TARGETS := ./build/result/Ethiopia.pmtiles \
 	./build/result/Mongolia.pmtiles \
 	./build/result/Vietnam.pmtiles \
 	./build/result/Cambodia.pmtiles \
-	./build/result/United Arab Emirates.pmtiles \
+	./build/result/United_Arab_Emirates.pmtiles \
 	./build/result/Georgia.pmtiles \
 	./build/result/Azerbaijan.pmtiles \
 	./build/result/Turkey.pmtiles \
@@ -88,11 +88,11 @@ TARGETS := ./build/result/Ethiopia.pmtiles \
 	./build/result/Iraq.pmtiles \
 	./build/result/Iran.pmtiles \
 	./build/result/Qatar.pmtiles \
-	./build/result/Saudi Arabia.pmtiles \
+	./build/result/Saudi_Arabia.pmtiles \
 	./build/result/Pakistan.pmtiles \
 	./build/result/Thailand.pmtiles \
 	./build/result/Kuwait.pmtiles \
-	./build/result/East Timor.pmtiles \
+	./build/result/East_Timor.pmtiles \
 	./build/result/Brunei.pmtiles \
 	./build/result/Myanmar.pmtiles \
 	./build/result/Bangladesh.pmtiles \
@@ -101,28 +101,28 @@ TARGETS := ./build/result/Ethiopia.pmtiles \
 	./build/result/Jordan.pmtiles \
 	./build/result/Nepal.pmtiles \
 	./build/result/Yemen.pmtiles \
-	./build/result/Hong Kong.pmtiles \
-	./build/result/Turkish Republic of Northern Cyprus.pmtiles \
-	./build/result/United Nations Buffer Zone in Cyprus.pmtiles \
-	./build/result/Siachen Glacier.pmtiles \
+	./build/result/Hong_Kong.pmtiles \
+	./build/result/Turkish_Republic_of_Northern_Cyprus.pmtiles \
+	./build/result/United_Nations_Buffer_Zone_in_Cyprus.pmtiles \
+	./build/result/Siachen_Glacier.pmtiles \
 	./build/result/Baikonur.pmtiles \
-	./build/result/Akrotiri Sovereign Base Area.pmtiles \
+	./build/result/Akrotiri_Sovereign_Base_Area.pmtiles \
 	./build/result/Philippines.pmtiles \
-	./build/result/Sri Lanka.pmtiles \
+	./build/result/Sri_Lanka.pmtiles \
 	./build/result/Taiwan.pmtiles \
 	./build/result/Japan.pmtiles \
-	./build/result/Australian Indian Ocean Territories.pmtiles \
+	./build/result/Australian_Indian_Ocean_Territories.pmtiles \
 	./build/result/Singapore.pmtiles \
 	./build/result/Bahrain.pmtiles \
-	./build/result/Wake Island.pmtiles \
+	./build/result/Wake_Island.pmtiles \
 	./build/result/Macau.pmtiles \
-	./build/result/Scarborough Shoal.pmtiles \
+	./build/result/Scarborough_Shoal.pmtiles \
 	./build/result/France.pmtiles \
 	./build/result/Ukraine.pmtiles \
 	./build/result/Belarus.pmtiles \
 	./build/result/Lithuania.pmtiles \
 	./build/result/Russia.pmtiles \
-	./build/result/Czech Republic.pmtiles \
+	./build/result/Czech_Republic.pmtiles \
 	./build/result/Germany.pmtiles \
 	./build/result/Estonia.pmtiles \
 	./build/result/Latvia.pmtiles \
@@ -131,7 +131,7 @@ TARGETS := ./build/result/Ethiopia.pmtiles \
 	./build/result/Finland.pmtiles \
 	./build/result/Luxembourg.pmtiles \
 	./build/result/Belgium.pmtiles \
-	./build/result/North Macedonia.pmtiles \
+	./build/result/North_Macedonia.pmtiles \
 	./build/result/Albania.pmtiles \
 	./build/result/Kosovo.pmtiles \
 	./build/result/Spain.pmtiles \
@@ -141,7 +141,7 @@ TARGETS := ./build/result/Ethiopia.pmtiles \
 	./build/result/Slovakia.pmtiles \
 	./build/result/Poland.pmtiles \
 	./build/result/Ireland.pmtiles \
-	./build/result/United Kingdom.pmtiles \
+	./build/result/United_Kingdom.pmtiles \
 	./build/result/Greece.pmtiles \
 	./build/result/Austria.pmtiles \
 	./build/result/Italy.pmtiles \
@@ -152,34 +152,34 @@ TARGETS := ./build/result/Ethiopia.pmtiles \
 	./build/result/Croatia.pmtiles \
 	./build/result/Slovenia.pmtiles \
 	./build/result/Bulgaria.pmtiles \
-	./build/result/San Marino.pmtiles \
+	./build/result/San_Marino.pmtiles \
 	./build/result/Monaco.pmtiles \
 	./build/result/Andorra.pmtiles \
 	./build/result/Montenegro.pmtiles \
-	./build/result/Bosnia and Herzegovina.pmtiles \
+	./build/result/Bosnia_and_Herzegovina.pmtiles \
 	./build/result/Portugal.pmtiles \
 	./build/result/Moldova.pmtiles \
 	./build/result/Gibraltar.pmtiles \
-	./build/result/Vatican City.pmtiles \
+	./build/result/Vatican_City.pmtiles \
 	./build/result/Iceland.pmtiles \
 	./build/result/Malta.pmtiles \
 	./build/result/Jersey.pmtiles \
 	./build/result/Guernsey.pmtiles \
-	./build/result/Isle of Man.pmtiles \
+	./build/result/Isle_of_Man.pmtiles \
 	./build/result/Åland.pmtiles \
-	./build/result/Faroe Islands.pmtiles \
-	./build/result/Costa Rica.pmtiles \
+	./build/result/Faroe_Islands.pmtiles \
+	./build/result/Costa_Rica.pmtiles \
 	./build/result/Nicaragua.pmtiles \
-	./build/result/Saint Martin.pmtiles \
-	./build/result/Sint Maarten.pmtiles \
+	./build/result/Saint_Martin.pmtiles \
+	./build/result/Sint_Maarten.pmtiles \
 	./build/result/Haiti.pmtiles \
-	./build/result/Dominican Republic.pmtiles \
-	./build/result/El Salvador.pmtiles \
+	./build/result/Dominican_Republic.pmtiles \
+	./build/result/El_Salvador.pmtiles \
 	./build/result/Guatemala.pmtiles \
-	./build/result/Guantanamo Bay Naval Base.pmtiles \
+	./build/result/Guantanamo_Bay_Naval_Base.pmtiles \
 	./build/result/Cuba.pmtiles \
 	./build/result/Honduras.pmtiles \
-	./build/result/United States of America.pmtiles \
+	./build/result/United_States_of_America.pmtiles \
 	./build/result/Canada.pmtiles \
 	./build/result/Mexico.pmtiles \
 	./build/result/Belize.pmtiles \
@@ -187,64 +187,64 @@ TARGETS := ./build/result/Ethiopia.pmtiles \
 	./build/result/Greenland.pmtiles \
 	./build/result/Curaçao.pmtiles \
 	./build/result/Aruba.pmtiles \
-	./build/result/The Bahamas.pmtiles \
-	./build/result/Turks and Caicos Islands.pmtiles \
-	./build/result/Saint Pierre and Miquelon.pmtiles \
-	./build/result/Trinidad and Tobago.pmtiles \
+	./build/result/The_Bahamas.pmtiles \
+	./build/result/Turks_and_Caicos_Islands.pmtiles \
+	./build/result/Saint_Pierre_and_Miquelon.pmtiles \
+	./build/result/Trinidad_and_Tobago.pmtiles \
 	./build/result/Grenada.pmtiles \
-	./build/result/Saint Vincent and the Grenadines.pmtiles \
+	./build/result/Saint_Vincent_and_the_Grenadines.pmtiles \
 	./build/result/Barbados.pmtiles \
-	./build/result/Saint Lucia.pmtiles \
+	./build/result/Saint_Lucia.pmtiles \
 	./build/result/Dominica.pmtiles \
-	./build/result/United States Minor Outlying Islands.pmtiles \
+	./build/result/United_States_Minor_Outlying_Islands.pmtiles \
 	./build/result/Montserrat.pmtiles \
-	./build/result/Antigua and Barbuda.pmtiles \
-	./build/result/Saint Kitts and Nevis.pmtiles \
-	./build/result/United States Virgin Islands.pmtiles \
-	./build/result/Saint Barthélemy.pmtiles \
-	./build/result/Puerto Rico.pmtiles \
+	./build/result/Antigua_and_Barbuda.pmtiles \
+	./build/result/Saint_Kitts_and_Nevis.pmtiles \
+	./build/result/United_States_Virgin_Islands.pmtiles \
+	./build/result/Saint_Barthélemy.pmtiles \
+	./build/result/Puerto_Rico.pmtiles \
 	./build/result/Anguilla.pmtiles \
-	./build/result/British Virgin Islands.pmtiles \
+	./build/result/British_Virgin_Islands.pmtiles \
 	./build/result/Jamaica.pmtiles \
-	./build/result/Cayman Islands.pmtiles \
+	./build/result/Cayman_Islands.pmtiles \
 	./build/result/Bermuda.pmtiles \
-	./build/result/Bajo Nuevo Bank.pmtiles \
-	./build/result/Serranilla Bank.pmtiles \
-	./build/result/Papua New Guinea.pmtiles \
+	./build/result/Bajo_Nuevo_Bank.pmtiles \
+	./build/result/Serranilla_Bank.pmtiles \
+	./build/result/Papua_New_Guinea.pmtiles \
 	./build/result/Australia.pmtiles \
 	./build/result/Fiji.pmtiles \
-	./build/result/New Zealand.pmtiles \
-	./build/result/New Caledonia.pmtiles \
-	./build/result/Pitcairn Islands.pmtiles \
-	./build/result/French Polynesia.pmtiles \
+	./build/result/New_Zealand.pmtiles \
+	./build/result/New_Caledonia.pmtiles \
+	./build/result/Pitcairn_Islands.pmtiles \
+	./build/result/French_Polynesia.pmtiles \
 	./build/result/Kiribati.pmtiles \
-	./build/result/Marshall Islands.pmtiles \
-	./build/result/Norfolk Island.pmtiles \
-	./build/result/Cook Islands.pmtiles \
+	./build/result/Marshall_Islands.pmtiles \
+	./build/result/Norfolk_Island.pmtiles \
+	./build/result/Cook_Islands.pmtiles \
 	./build/result/Tonga.pmtiles \
-	./build/result/Wallis and Futuna.pmtiles \
+	./build/result/Wallis_and_Futuna.pmtiles \
 	./build/result/Samoa.pmtiles \
-	./build/result/Solomon Islands.pmtiles \
+	./build/result/Solomon_Islands.pmtiles \
 	./build/result/Tuvalu.pmtiles \
 	./build/result/Nauru.pmtiles \
-	./build/result/Federated States of Micronesia.pmtiles \
+	./build/result/Federated_States_of_Micronesia.pmtiles \
 	./build/result/Vanuatu.pmtiles \
 	./build/result/Niue.pmtiles \
-	./build/result/American Samoa.pmtiles \
+	./build/result/American_Samoa.pmtiles \
 	./build/result/Palau.pmtiles \
 	./build/result/Guam.pmtiles \
-	./build/result/Northern Mariana Islands.pmtiles \
-	./build/result/Coral Sea Islands.pmtiles \
-	./build/result/Ashmore and Cartier Islands.pmtiles \
-	./build/result/French Southern and Antarctic Lands.pmtiles \
+	./build/result/Northern_Mariana_Islands.pmtiles \
+	./build/result/Coral_Sea_Islands.pmtiles \
+	./build/result/Ashmore_and_Cartier_Islands.pmtiles \
+	./build/result/French_Southern_and_Antarctic_Lands.pmtiles \
 	./build/result/Seychelles.pmtiles \
-	./build/result/Heard Island and McDonald Islands.pmtiles \
-	./build/result/Saint Helena.pmtiles \
+	./build/result/Heard_Island_and_McDonald_Islands.pmtiles \
+	./build/result/Saint_Helena.pmtiles \
 	./build/result/Mauritius.pmtiles \
-	./build/result/British Indian Ocean Territory.pmtiles \
+	./build/result/British_Indian_Ocean_Territory.pmtiles \
 	./build/result/Maldives.pmtiles \
-	./build/result/South Georgia and the South Sandwich Islands.pmtiles \
-	./build/result/Clipperton Island.pmtiles \
+	./build/result/South_Georgia_and_the_South_Sandwich_Islands.pmtiles \
+	./build/result/Clipperton_Island.pmtiles \
 	./build/result/Chile.pmtiles \
 	./build/result/Bolivia.pmtiles \
 	./build/result/Peru.pmtiles \
@@ -256,7 +256,7 @@ TARGETS := ./build/result/Ethiopia.pmtiles \
 	./build/result/Ecuador.pmtiles \
 	./build/result/Colombia.pmtiles \
 	./build/result/Paraguay.pmtiles \
-	./build/result/Brazilian Island.pmtiles \
+	./build/result/Brazilian_Island.pmtiles \
 	./build/result/Venezuela.pmtiles \
-	./build/result/Southern Patagonian Ice Field.pmtiles \
-	./build/result/Falkland Islands.pmtiles
+	./build/result/Southern_Patagonian_Ice_Field.pmtiles \
+	./build/result/Falkland_Islands.pmtiles

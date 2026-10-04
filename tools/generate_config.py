@@ -48,7 +48,7 @@ def generate_config(gdf, output_file):
             country_name = row[name_column]
 
             targets.append(
-                f"./build/result/{country_name}.pmtiles"
+                f"./build/result/{safe_filename(country_name)}.pmtiles"
             )
 
     with open(output_file, "w", encoding="utf-8") as f:
