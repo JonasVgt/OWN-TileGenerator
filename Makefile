@@ -50,7 +50,7 @@ build-tiles: build/result/Western_Sahara.pmtiles
 
 
 configure: ./build/shapefile/ne_10m_admin_0_countries.shp
-	python tools/generate_config.py -i "$<" -o "config.json"
+	python tools/generate_config.py -i "$<" -o "config.mk"
 
 clean:
 	rm -rf build

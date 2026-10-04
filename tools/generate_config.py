@@ -36,7 +36,7 @@ def determine_name_column(gdf):
 
 def generate_config(gdf, output_file):
     name_column = determine_name_column(gdf)
-    extracts_countries = []
+    targets = []
 
     for continent, group in gdf.groupby("CONTINENT"):
         # Merge all country polygons into a single geometry
@@ -47,13 +47,18 @@ def generate_config(gdf, output_file):
         for _, row in group.iterrows():
             country_name = row[name_column]
 
-            extracts_countries.append(
-                {"name": f"{safe_filename(country_name)}", "type": "country"}
+            targets.append(
+                f"./build/result/{country_name}.pmtiles"
             )
 
-    config = {"extracts": extracts_countries}
     with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(config, f, indent=2)
+        f.write("# --- WARNING ---\n")
+        f.write("# This file was generated using 'make configure'. Do not modify this file by hand.\n")
+        f.write("# ---------------\n")
+        f.write("\n")
+        f.write(f"TARGETS := {" \\\n\t".join(targets)}\n")
+
+        
 
 
 def main():
@@ -71,8 +76,8 @@ def main():
     parser.add_argument(
         "-o",
         "--output",
-        default="config.json",
-        help="Output file (default: config.json).",
+        default="config.mk",
+        help="Output file (default: config.mk).",
     )
 
     args = parser.parse_args()
