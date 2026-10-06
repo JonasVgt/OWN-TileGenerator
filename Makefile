@@ -18,13 +18,18 @@ extract_continents: ./build/continents/extract.json ./build/sources/planet-26062
 	osmium extract --config "./build/continents/extract.json" "./build/sources/planet-260622.osm.pbf" --fsync --overwrite
 
 # Extract country GEOJSONs
-./build/country/extract.json: ./build/shapefile/ne_10m_admin_0_countries.shp
-	python tools/extract_country_boundaries.py -i ./build/shapefile/ne_10m_admin_0_countries.shp -o ./build/countries
+extract-country-boundaries: ./build/shapefile/ne_10m_admin_0_countries.shp
+	python tools/extract_country_boundaries.py -i $< -o ./build/countries
 
 # Extract countries osm.pbf
-extract_countries: ./build/country/extract.json ./build/continents/Africa.osm.pbf
-	echo "Extracting countries..."
-	osmium extract --config "./build/countries/Africa-extract-2.json" "./build/continents/Africa.osm.pbf" --fsync --overwrite
+extract-countries: extract-country-boundaries
+	for dir in ./build/countries/*/; do \
+		continent=$$(basename "$$dir"); \
+		for file in $${dir}extract-*.json; do \
+			echo "$$file"; \
+			osmium extract --config "$$file" "./build/continents/$${continent}.osm.pbf" --fsync --overwrite; \
+		done; \
+	done
 
 # Initialize Planetiler
 $(PLANETILER_JAR):
