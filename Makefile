@@ -52,7 +52,6 @@ $(PLANETILER_JAR):
 	--tmpdir="./build/tmp" \
 	--force
 
-build-tiles: build/result/Western_Sahara.pmtiles
 
 ./build/result/datasets.json:
 	python tools/generate_datasets_json.py -i ./build/result/ -o $@
