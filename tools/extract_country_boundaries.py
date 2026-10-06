@@ -102,7 +102,7 @@ def main():
     parser.add_argument(
         "-n",
         "--extracts-per-file",
-        default="6",
+        default=6,
         help="Number of files per osmium extract to reduce memory usage (default: 6).",
     )
 
