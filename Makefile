@@ -1,7 +1,8 @@
 PLANETILER_VERSION := 1.0.0-SNAPSHOT
 PLANETILER_JAR := ./planetiler-nautical/target/planetiler-nauticaltiles-$(PLANETILER_VERSION)-with-deps.jar
+include config.mk
 
-all: build-tiles
+all: $(TARGETS)
 
 # Extract shapefile from zip
 ./build/shapefile/ne_10m_admin_0_countries.shp: 
