@@ -37,7 +37,7 @@ $(PLANETILER_JAR):
 	./mvnw clean package
 
 # Build tiles
-./build/result/%.pmtiles: ./build/countries/%.osm.pbf $(PLANETILER_JAR) 
+./build/pmtiles/%.pmtiles: ./build/countries/%.osm.pbf $(PLANETILER_JAR) 
 	echo "Building tiles..."
 	java \
 	-Xmx20g \
@@ -55,6 +55,11 @@ $(PLANETILER_JAR):
 
 ./build/result/datasets.json:
 	python tools/generate_datasets_json.py -i ./build/result/ -o $@
+
+./build/result/%.region: ./build/pmtiles/%.pmtiles
+	python tools/extract-metadata.py -i $< -o "./build/tmp/$*.pmtiles" -d "./build/tmp/$*.db"
+	mkdir -p ./build/result/
+	zip -mj "$@" "./build/tmp/$*.pmtiles" "./build/tmp/$*.db"
 
 configure: ./build/shapefile/ne_10m_admin_0_countries.shp
 	python tools/generate_config.py -i "$<" -o "config.mk"
