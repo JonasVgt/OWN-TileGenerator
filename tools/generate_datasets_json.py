@@ -40,7 +40,7 @@ def generate_datasets(input_dir: Path, output_file):
         if not file.is_file:
             continue
 
-        if file.suffix != ".pmtiles":
+        if file.suffix != ".region":
             continue
 
         with open(file, "rb") as f:
